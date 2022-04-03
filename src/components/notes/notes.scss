@@ -1,0 +1,70 @@
+.notes {
+  flex: 0.5;
+  background-color: white;
+  border-radius: 5px;
+
+  .wrapper {
+    height: 100%;
+    width: 100%;
+    padding: 20px 10px;
+
+    .notesHeader {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 20px;
+
+      p,
+      span {
+        font-weight: bold;
+      }
+      span {
+        color: blue;
+      }
+    }
+
+    .notesBody {
+      height: 60%;
+      background-color: var(--body);
+      border-radius: 5px;
+      padding: 10px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      p {
+        font-size: 14px;
+        color: gray;
+        margin-bottom: 5px;
+      }
+
+      .save {
+        margin-left: auto;
+        padding: 5px 5px;
+        color: white;
+        background-color: blue;
+        border: none;
+        border-radius: 5px;
+        width: max-content;
+      }
+    }
+
+    .notesFooter {
+      // padding: 0 10px;
+      p {
+        margin: 10px 5px;
+      }
+      .author {
+        display: flex;
+        justify-content: space-between;
+        span {
+          font-size: 12px;
+          font-weight: bold;
+          color: gray;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
