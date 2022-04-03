@@ -2,11 +2,11 @@ import "./patientdetails.scss";
 import PatientCard from "./patientCard/PatientCard";
 import PatientDetail from "./patientDetail/PatientDetail";
 
-const PatientDetails = () => {
+const PatientDetails = ({ patient }) => {
   return (
     <div className="patientdetails">
-      <PatientCard />
-      <PatientDetail />
+      <PatientCard patient={patient} />
+      <PatientDetail patient={patient} />
     </div>
   );
 };

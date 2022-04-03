@@ -1,12 +1,12 @@
 import "./header.scss";
 import { Add, Notifications, PersonOutline, Search } from "@material-ui/icons";
 
-const Header = () => {
+const Header = ({ patient }) => {
   return (
     <div className="header">
       <div className="headerLeft">
         <PersonOutline className="icon" />
-        <span className="headerName">Diane Cooper</span>
+        <span className="headerName">{patient?.name}</span>
       </div>
       <div className="headerRight">
         <div className="search">

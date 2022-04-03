@@ -4,18 +4,20 @@ import Header from "../../components/header/Header";
 import { ArrowForwardIos, Edit } from "@material-ui/icons";
 import PatientDetails from "../../components/patientDetail/PatientDetails";
 import Appointments from "../../components/appointments/Appointments";
+import Notes from "../../components/notes/Notes";
+import Files from "../../components/files/Files";
 
-const PatientList = () => {
+const PatientList = ({ patient, appointment, file, docter }) => {
   return (
     <div className="patientlist">
-      <Sidebar />
+      <Sidebar docter={docter} />
       <div className="body">
-        <Header />
+        <Header patient={patient} />
         <div className="current">
           <div className="left">
             <span className="currentLink">Patient List</span>
             <ArrowForwardIos />
-            <span className="patientName">Diane Cooper</span>
+            <span className="patientName">{patient.name}</span>
           </div>
           <div className="right">
             <Edit />
@@ -24,11 +26,16 @@ const PatientList = () => {
         <div className="main">
           <div className="mainLeft">
             <div className="mainWrapper">
-              <PatientDetails />
-              <Appointments />
+              <PatientDetails patient={patient} />
+              <Appointments appointment={appointment} />
             </div>
           </div>
-          <div className="mainRight">{/* Files */}</div>
+          <div className="mainRight">
+            <div className="sideWrapper">
+              <Notes />
+              <Files file={file} />
+            </div>
+          </div>
         </div>
       </div>
     </div>

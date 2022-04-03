@@ -48,5 +48,9 @@
     background-color: transparent;
     outline: none;
     border: 1px solid lightgray;
+
+    &:hover {
+      background-color: lightgray;
+    }
   }
 }

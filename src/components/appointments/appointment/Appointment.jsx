@@ -1,18 +1,18 @@
 import { EventNoteOutlined } from "@material-ui/icons";
 import "./appointment.scss";
 
-const Appointment = () => {
+const Appointment = ({ appointment }) => {
   return (
     <div className="appointment">
       <div className="left">
         <div className="wrapper">
           <div className="date">
-            <span>26 Nov '19</span>
-            <p className="time">09.00 - 10.00</p>
+            <span>{appointment["Upcoming Appointments"]?.Date}</span>
+            <p className="time">{appointment["Upcoming Appointments"]?.Time}</p>
           </div>
           <div className="treatment">
             <p>Treatment</p>
-            <span>Open Access</span>
+            <span>{appointment["Upcoming Appointments"]?.Treatment}</span>
           </div>
         </div>
       </div>
@@ -20,11 +20,11 @@ const Appointment = () => {
         <div className="wrapper">
           <div className="dentist">
             <p>Dentist</p>
-            <span>Drg. Adam H.</span>
+            <span>{appointment["Upcoming Appointments"]?.Dentist}</span>
           </div>
           <div className="nurse">
             <p>Nurse</p>
-            <span>Jessicamila</span>
+            <span>{appointment["Upcoming Appointments"]?.Nurse}</span>
           </div>
           <div className="icon">
             <EventNoteOutlined />

@@ -1,7 +1,7 @@
 import Appointment from "./appointment/Appointment";
 import "./appointments.scss";
 
-const Appointments = () => {
+const Appointments = ({ appointment }) => {
   return (
     <div className="appointments">
       <div className="wrapper">
@@ -24,10 +24,7 @@ const Appointments = () => {
             <button>Show Previous Treatments</button>
           </div>
           <div className="appointmentContainer">
-            <Appointment />
-            <Appointment />
-            <Appointment />
-            <Appointment />
+            <Appointment appointment={appointment} />
           </div>
         </div>
       </div>

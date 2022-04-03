@@ -1,0 +1,37 @@
+.files {
+  flex: 0.5;
+  height: 50%;
+  background-color: white;
+  border-radius: 5px;
+
+  .wrapper {
+    padding: 20px 10px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+
+    .filesHeader {
+      padding: 10px 20px;
+      flex: 0.15;
+      display: flex;
+      justify-content: space-between;
+      p,
+      span {
+        font-weight: bold;
+      }
+
+      span {
+        color: blue;
+      }
+    }
+
+    .fileContainer {
+      overflow-y: auto;
+      margin-top: 10px;
+      padding: 0 15px;
+      flex: 1;
+    }
+  }
+}

@@ -9,8 +9,9 @@ import {
   SettingsOutlined,
   Help,
 } from "@material-ui/icons";
+import { image } from "../patientDetail/patientCard/image";
 
-const Sidebar = () => {
+const Sidebar = ({ docter }) => {
   return (
     <div className="sidebar">
       <div className="top">
@@ -34,7 +35,7 @@ const Sidebar = () => {
             </div>
           </li>
           <li>
-            <div className="li-item">
+            <div className="li-item active">
               <AccountCircleOutlined className="icon" />
               <span className="side-text">Patient List</span>
             </div>
@@ -65,7 +66,15 @@ const Sidebar = () => {
           </li>
         </ul>
       </div>
-      <div className="bottom"></div>
+      <div className="bottom">
+        <div className="side-item">
+          <img src={image} alt="" />
+          <span className="side-text">
+            <h3>{docter?.name}</h3>
+            <p>{docter?.specification}</p>
+          </span>
+        </div>
+      </div>
     </div>
   );
 };

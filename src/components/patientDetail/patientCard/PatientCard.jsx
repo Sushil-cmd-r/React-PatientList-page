@@ -1,19 +1,19 @@
 import "./patientcard.scss";
 import { image } from "./image";
 
-const PatientCard = () => {
+const PatientCard = ({ patient }) => {
   return (
     <div className="patientcard">
       <img src={image} alt="" />
-      <h3>Diane Cooper</h3>
-      <p>diane@email.com</p>
+      <h3>{patient.name}</h3>
+      <p>{patient["e-email"]}</p>
       <div className="meta">
         <span className="posts">
-          <h3>15</h3> Post
+          <h3>{patient.Past}</h3> Past
         </span>
         <div className="divider"></div>
         <span className="upcoming">
-          <h3>2</h3>Upcoming
+          <h3>{patient.Upcoming}</h3>Upcoming
         </span>
       </div>
       <button>Send Message</button>
