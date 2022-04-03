@@ -1,0 +1,50 @@
+.patientlist {
+  position: relative;
+  background-color: var(--body);
+  height: 100vh;
+  width: 100vw;
+}
+
+.body {
+  margin-left: 4rem;
+
+  .current {
+    display: flex;
+    height: 3rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    font-size: 17px;
+    border-bottom: 1px solid lightgray;
+
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      .currentLink {
+        color: blue;
+      }
+    }
+  }
+
+  .main {
+    width: 100%;
+    height: calc(100vh - 7.5rem);
+    display: flex;
+    padding: 10px 30px;
+    gap: 1rem;
+
+    &Left {
+      flex: 0.8;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    &Right {
+      flex: 0.3;
+      background-color: red;
+    }
+  }
+}

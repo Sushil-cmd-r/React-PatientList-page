@@ -1,0 +1,52 @@
+.patientcard {
+  flex: 0.35;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--components);
+  padding: 10px 0;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+
+  img {
+    height: 7rem;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 1px solid black;
+  }
+
+  h3 {
+    margin-top: 10px;
+  }
+  p {
+    color: gray;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+  .meta {
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    width: 70%;
+    margin: 0 auto;
+    justify-content: space-around;
+
+    span {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  button {
+    margin-top: 15px;
+    width: 70%;
+    font-size: 1rem;
+    padding: 5px 15px;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid lightgray;
+  }
+}

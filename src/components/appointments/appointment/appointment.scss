@@ -1,0 +1,70 @@
+.appointment {
+  background-color: white;
+  padding: 10px 0px;
+  display: flex;
+  height: 5.5rem;
+  border-radius: 5px;
+  margin: 5px;
+  margin-bottom: 10px;
+
+  .left {
+    flex: 0.5;
+    height: 100%;
+    .wrapper {
+      width: 100%;
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+
+      p {
+        font-size: 13px;
+        font-weight: bold;
+        color: gray;
+      }
+
+      .date {
+        span {
+          font-size: 1.5rem;
+        }
+      }
+      .treatment {
+        span {
+          font-size: 1.3rem;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  .right {
+    flex: 0.5;
+    .wrapper {
+      width: 100%;
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+
+      p {
+        font-size: 13px;
+        font-weight: bold;
+        color: gray;
+      }
+
+      span {
+        font-size: 17px;
+        font-weight: bold;
+      }
+
+      .icon {
+        display: flex;
+        align-items: center;
+
+        span {
+          margin-left: 5px;
+          color: blue;
+        }
+      }
+    }
+  }
+}
