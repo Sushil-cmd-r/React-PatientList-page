@@ -23,8 +23,10 @@ const PatientList = () => {
         </div>
         <div className="main">
           <div className="mainLeft">
-            <PatientDetails />
-            <Appointments />
+            <div className="mainWrapper">
+              <PatientDetails />
+              <Appointments />
+            </div>
           </div>
           <div className="mainRight">{/* Files */}</div>
         </div>
