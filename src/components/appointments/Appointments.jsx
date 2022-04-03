@@ -1,19 +1,29 @@
+import { useState } from "react";
 import Appointment from "./appointment/Appointment";
 import "./appointments.scss";
 
-const Appointments = ({ appointment }) => {
+const Appointments = ({ appointment = {} }) => {
+  const [active, setActive] = useState(1);
+  const upcoming = () => {
+    setActive(1);
+  };
+  const set = () => {
+    setActive(2);
+  };
+  const med = () => setActive(3);
+
   return (
     <div className="appointments">
       <div className="wrapper">
         <div className="top">
           <ul>
-            <li className="active">
+            <li className={active == 1 ? "active" : ""} onClick={upcoming}>
               <p>Upcoming Appointments</p>
             </li>
-            <li>
+            <li className={active == 2 ? "active" : ""} onClick={set}>
               <p>Post Appointments</p>
             </li>
-            <li>
+            <li className={active == 3 ? "active" : ""} onClick={med}>
               <p>Medical Record</p>
             </li>
           </ul>
